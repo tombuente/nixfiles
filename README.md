@@ -1,10 +1,12 @@
-# Rebuild
+# Nixfiles (Dotfiles)
+
+## Usage
 ```
-sudo nixos-rebuild switch --flake .#nixos
+sudo nixos-rebuild switch --flake .#workstation
 ```
 
-# Packages
+## Packages
 https://search.nixos.org/packages
 
-# Home-Manager
+## Home-Manager
 https://mipmip.github.io/home-manager-option-search/

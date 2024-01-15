@@ -11,30 +11,14 @@
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
-      nixos = inputs.nixpkgs.lib.nixosSystem {
+      workstation = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./hosts/workstation
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-
-            home-manager.users.tom = {
-              home.username = "tom";
-              home.homeDirectory = "/home/tom";
-              home.stateVersion = "23.11";
-
-              programs.home-manager.enable = true;
-
-              imports = [
-                ./modules/git.nix
-                ./modules/alacritty.nix
-                ./modules/helix.nix
-                ./modules/vscode.nix
-                ./modules/packages.nix
-              ];
-            };
           }
         ];
       };
