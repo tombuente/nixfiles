@@ -16,6 +16,7 @@
 
     imports = [
       ./modules/alacritty.nix
+      ./modules/emacs.nix
       ./modules/git.nix
       ./modules/helix.nix
       ./modules/packages.nix

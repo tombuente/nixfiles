@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-let
-in {
+{ config, pkgs, ... }: {
   home.packages = with pkgs; [
     btop
-    emacs
+    discord
     ffmpeg
     firefox
     htop
@@ -14,6 +12,7 @@ in {
     clojure-lsp
     go
     gopls
+    nixfmt
     python3
     rustup
     taplo
@@ -30,4 +29,9 @@ in {
     mpfr
     texinfo
   ];
+
+  home.file."${config.xdg.configHome}" = {
+    source = ../dotfiles;
+    recursive = true;
+  };
 }

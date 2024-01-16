@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-let
-in {
+{ ... }: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -14,9 +12,7 @@ in {
           select = "underline";
         };
       };
-      keys = {
-        normal.esc = [ "collapse_selection" "normal_mode" ];
-      };
+      keys = { normal.esc = [ "collapse_selection" "normal_mode" ]; };
     };
   };
 }

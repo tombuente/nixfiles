@@ -1,13 +1,7 @@
 { config, pkgs, ... }: {
-  imports = [ 
-    ./hardware.nix
-    ../../users/tom
-  ];
+  imports = [ ./hardware.nix ../../users/tom ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes" 
-  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -18,7 +12,6 @@
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -43,6 +36,19 @@
 
   environment.pathsToLink = [ "/share/zsh" ];
   environment.shells = with pkgs; [ zsh ];
+
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      jetbrains-mono
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        monospace = [ "JetBrains Mono" ];
+      };
+    };
+  };
 
   system.stateVersion = "23.11";
 }

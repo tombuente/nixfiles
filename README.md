@@ -9,4 +9,4 @@ sudo nixos-rebuild switch --flake .#workstation
 https://search.nixos.org/packages
 
 ## Home-Manager
-https://mipmip.github.io/home-manager-option-search/
+https://mipmip.github.io/home-manager-option-search/ lil
