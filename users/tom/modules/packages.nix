@@ -2,16 +2,21 @@
   home.packages = with pkgs; [
     btop
     discord
+    fd
     ffmpeg
     firefox
     htop
+    ripgrep
     vlc
 
     buf-language-server
     clojure
     clojure-lsp
+    ghc
     go
     gopls
+    haskell-language-server
+    jdk
     nixfmt
     python3
     rustup
@@ -22,8 +27,10 @@
 
     bison
     clang-tools
+    cmake
     flex
     gmp
+    gnumake
     libgcc
     libmpc
     mpfr
