@@ -5,6 +5,7 @@
     fd
     ffmpeg
     firefox
+    gh
     htop
     ripgrep
     vlc
@@ -18,6 +19,7 @@
     haskell-language-server
     jdk
     nixfmt
+    poetry
     python3
     rustup
     taplo
