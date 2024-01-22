@@ -10,6 +10,7 @@
     ripgrep
     vlc
 
+    black
     buf-language-server
     clojure
     clojure-lsp
